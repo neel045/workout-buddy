@@ -1,0 +1,19 @@
+{
+    "name": "backend",
+    "version": "1.0.0",
+    "description": "mern stack learning ",
+    "main": "server.js",
+    "license": "MIT",
+    "scripts": {
+        "start": "node server.js",
+        "dev": "npx nodemon server.js"
+    },
+    "dependencies": {
+        "dotenv": "^16.0.3",
+        "express": "^4.18.2",
+        "mongoose": "^6.7.2"
+    },
+    "devDependencies": {
+        "prettier": "^2.7.1"
+    }
+}
