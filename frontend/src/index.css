@@ -115,3 +115,42 @@ input.error {
 #delete-btn {
     color: var(--primary);
 }
+
+nav {
+    display: flex;
+    align-items: center;
+}
+nav a {
+    margin-left: 10px;
+}
+
+nav a:hover {
+    color: var(--primary);
+}
+
+nav button {
+    background: #fff;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-family: "Poppins";
+    cursor: pointer;
+    font-size: 1em;
+    margin-left: 12px;
+}
+
+nav button:hover {
+    color: #fff;
+    background: var(--primary);
+}
+
+/* auth forms */
+form.signup,
+form.login {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 4px;
+}
