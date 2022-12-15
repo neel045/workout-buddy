@@ -6,10 +6,12 @@ const router = express.Router()
 
 router.use(requireAuth)
 
-router.get("/", workoutController.getWorkouts)
-router.get("/:id", workoutController.getWorkout)
-router.post("/", workoutController.createWorkout)
-router.patch("/:id", workoutController.updateWorkout)
-router.delete("/:id", workoutController.deleteWorkout)
+router.route("/").get(workoutController.getWorkouts).post(workoutController.createWorkout)
+
+router
+    .route("/:id")
+    .get(workoutController.getWorkout)
+    .patch(workoutController.updateWorkout)
+    .delete(workoutController.deleteWorkout)
 
 module.exports = router

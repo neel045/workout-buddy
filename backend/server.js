@@ -1,25 +1,5 @@
-const express = require("express")
 const mongoose = require("mongoose")
-require("dotenv").config()
-
-const workoutsRouter = require("./routes/workoutRouter")
-const usersRouter = require("./routes/userRouter")
-
-const app = express()
-
-//middlewares
-app.use(express.json())
-
-app.use((req, res, next) => {
-    console.log(req.path, req.method)
-    next()
-})
-
-//routes
-app.use("/api/workouts", workoutsRouter)
-app.use("/api/user", usersRouter)
-
-//connect to db
+const app = require("./app")
 
 mongoose
     .connect(process.env.MONGODB_URI.replace("<password>", process.env.PASSWORD))
